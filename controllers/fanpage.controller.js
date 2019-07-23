@@ -22,7 +22,7 @@ const insertFanpage = (req, res) => {
 const comment=(req,res)=>{
   const { idFan} = req.params; 
   const newComment = req.body.comment;
-  _fanpage.update({"_id":idFan}, { "$push":{"comments":{"$each":[newComment]}}})
+  _fanpage.update({"_id":idFan}, { "$push":{"comments":newComment}})
       .then((data) => {
           res.status(status.OK);
           res.json({ msg: 'Comment added!!', data: data });

@@ -10,13 +10,13 @@ var fanSchema=new mongoose.Schema({
         type:String
     },
     keywords:[
-        String
+        {type:String}
     ],
     comments:[
-        String
+        {type:String}
     ],
     califications:[
-        Number
+        {type:Number}
     ]
 })
 
